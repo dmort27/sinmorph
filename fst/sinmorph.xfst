@@ -1,0 +1,11 @@
+! sinmorph.xfst
+
+read lexc nouns.lexc
+define Nouns;
+
+read lexc verbs.lexc
+define Verbs;
+
+regex ( Nouns | Verbs );
+
+save stack sinmorph.fst
