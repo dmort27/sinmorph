@@ -1,4 +1,6 @@
 ! verbs.lexc
 
+Multichar_Symbols +V
+
 LEXICON Root
-stem    #;
++V:0    #;

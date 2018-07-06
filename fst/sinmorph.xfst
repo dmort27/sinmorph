@@ -6,6 +6,8 @@ define Nouns;
 read lexc verbs.lexc
 define Verbs;
 
+! Phonological/orthographic rules
+
 regex ( Nouns | Verbs );
 
 save stack sinmorph.fst
