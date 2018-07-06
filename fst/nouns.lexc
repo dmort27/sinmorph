@@ -1,0 +1,16 @@
+!!!nouns.lexc!!!
+
+Multichar_Symbols +N +Anim +Inanim +Indef +Nom +Acc +Dat +GenLoc +InstrAbl +Sg +Pl
+
+LEXICON Root
+පක්ෂ            N;
+
+LEXICON N
++N:0            Case;
+
+LEXICON Case
++Nom:0          #;
++Acc:ව          #;
++Dat:ට​          #;
++GenLoc:ගෙ      #;
++InstrAbl:ගෙඞ්   #;
