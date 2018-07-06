@@ -12,5 +12,5 @@ class NounTests(unittest.TestCase):
         analyses, _ = pipe.communicate(input=token.encode('utf-8'))
         return set(analyses.decode('utf-8').strip().split('\n'))
 
-    def test_noun1(self):
-        self.assertEqual(self._get_analyses('ජනතාවට'), {'ජනතාව+N+Sg+Dat+Anim'})
+    def test_janataavata(self):
+        self.assertEqual(self._get_analyses('ජනතාවට'), {'ජනතාව+N+Dat+Sg+Anim'})
