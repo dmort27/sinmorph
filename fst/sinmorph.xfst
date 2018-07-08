@@ -8,7 +8,7 @@ define Vowel ා | ැ | ෑ | ි | ී | ු | ූ | ෙ | ේ | ෛ | ො | �
 
 define Other ් | ං | ඃ ;
 
-define PossNounStem ?+ "+Guess":0 ;
+define PossNounStem [Cons | Vowel]+ Cons "+Guess":0 ;
 
 read lexc < nouns.lexc
 
@@ -22,3 +22,5 @@ read regex $["+Guess"] .o. AllInclusive ;
 save stack guesser.fst
 
 ! save stack sinmorph.fst
+
+pairs
