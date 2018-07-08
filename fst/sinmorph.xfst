@@ -8,7 +8,7 @@ define Vowel ා | ැ | ෑ | ි | ී | ු | ූ | ෙ | ේ | ෛ | ො | �
 
 define Other ් | ං | ඃ ;
 
-define PossNounStem ?+ "+Guess":0 ;
+define PossNounStem [[Cons | Vowel]+ Cons] "+Guess":0 ;
 
 read lexc < nouns.lexc
 
