@@ -1,0 +1,45 @@
+! Phonological/orthographic rules
+! Emily started here
+
+define VowelShort [ා ැ ෑ ි ී ු ූ ෙ ේ ෛ ො ෝ ෞ];
+
+! when vowel-final lexical base + vowel-initial morpheme, the final vowel of the preceding component is deleted
+define VowFinDeletion VowelShort -> 0 || _ %^ VowelShort;
+
+! insert [y] after front vowels, [w] after back vowels, but before a vowel-initial morpheme
+! define SemiVowelInsertion1 [..] -> ය || [ි | ෙ | ැ] _ [VowelShort | 0] %^;
+
+! define SemiVowelInsertion2 [..] -> ව || [ු | ො | ා] _ [VowelShort | 0] %^;
+
+! ASSIMILATION
+! T~D: 't' becomes 'd' before 'd'
+define TtoD ත -> ද ||  _ %^ ද;
+
+! K~P: 'k' becomes 'p' before 'p'
+define KtoP ක -> ප ||  _ %^ ප;
+
+! K~G: 'k' becomes 'g' before 'g'
+define KtoG ක -> ග ||  _ %^ ග;
+
+! W~P: 'w' becomes 'p' after 'p'
+define WtoP ව -> ප || ප %^ _;
+
+! W~N: 'w' becomes 'n' after 'n'
+define WtoN ව -> න || න %^ _;
+
+! W~D: 'w' becomes 'd' after 'd'
+define WtoD ව -> ද || ද %^ _;
+
+! T~L: 't' becomes 'l' before 'l'
+define TtoL ත -> ල || _ %^ ල;
+
+! N~M: 'n' becomes 'm' before 'm'
+define NtoM න -> ම || _ %^ ම;
+
+! add vowel 'u' or 'a' between 'k_ʈa'
+define Epenthesis ක් -> [ක | කු] || _ %^ ට;
+
+# Cleanup 1: Remove ^ (generic morpheme boundary tag)
+define Cleanup1 %^ -> 0;
+
+! Emily ended here
