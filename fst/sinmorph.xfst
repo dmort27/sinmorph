@@ -15,12 +15,10 @@ read lexc < nouns.lexc
 substitute defined PossNounStem for "^GUESSSTEM"
 define AllInclusive ;
 
-! read regex ~$["+Guess"] .o. AllInclusive ;
+read regex ~$["+Guess"] .o. AllInclusive ;
 ! save stack attested.fst
 
 read regex $["+Guess"] .o. AllInclusive ;
-save stack guesser.fst
+! save stack guesser.fst
 
-! save stack sinmorph.fst
-
-pairs
+save stack sinmorph.fst
