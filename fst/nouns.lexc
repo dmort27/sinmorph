@@ -23642,9 +23642,9 @@ LEXICON ShortANoun
 +N+GenLoc+Pl+Anim:න්ගේ #; ! -ngeː
 +N+GenLoc+Sg+Inanim:ේ #; ! -eː
 +N+GenLoc+Sg+Inanim:වල්වල #; ! -walwala
-+N+Voc+Sg+Anim:ේ # ! -eː
-+N+Voc+Pl+Anim:නෙ # ! -ne
-+N+Voc+Pl:නේ # ! -eː
++N+Voc+Sg+Anim:ේ #; ! -eː
++N+Voc+Pl+Anim:නෙ #; ! -ne
++N+Voc+Pl:නේ #; ! -eː
 
 LEXICON LongANoun
 ා+N+Nom+Sg:ා #;
@@ -23675,6 +23675,6 @@ LEXICON LongANoun
 ා+N+GenLoc+Pl+Anim:න්ගේ #; ! -ngeː
 ා+N+GenLoc+Sg+Inanim:ේ #; ! -eː
 ා+N+GenLoc+Sg+Inanim:වල්වල #; ! -walwala
-ා+N+Voc+Sg+Anim:ේ # ! -eː
-ා+N+Voc+Pl+Anim:නෙ # ! -ne
-ා+N+Voc+Pl:නේ # ! -eː
+ා+N+Voc+Sg+Anim:ේ #; ! -eː
+ා+N+Voc+Pl+Anim:නෙ #; ! -ne
+ා+N+Voc+Pl:නේ #; ! -eː
