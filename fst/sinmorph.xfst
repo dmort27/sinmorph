@@ -1,57 +1,24 @@
 ! sinmorph.xfst
 
-read lexc nouns.lexc
-define Nouns;
+clear stack
 
-read lexc verbs.lexc
-define Verbs;
+define Cons ක | ඛ | ග | ඝ | ඞ | ඟ | ච | ඡ | ජ | ඣ | ඤ | ඥ | ඦ | ට | ඨ | ඩ | ඪ | ණ | ඬ | ත | ථ | ද | ධ | න | ඳ | ප | ඵ | බ | භ | ම | ඹ | ය | ර | ල | ළ | ව | හ | ශ | ෂ | ස | ෆ | ‍ය | ‍ර | ක | ්‍ෂ ;
 
-! Phonological/orthographic rules
-! Emily started here
+define Vowel ා | ැ | ෑ | ි | ී | ු | ූ | ෙ | ේ | ෛ | ො | ෝ | ෞ | ෘ | ෲ | ෟ | ෳ | අ | ආ | ඇ | ඈ | ඉ | ඊ | උ | ඌ | එ | ඒ | ඓ | ඔ | ඕ | ඖ | ඍ | ඎ | ඏ | ඐ ;
 
-define VowelShort [ා ැ ෑ ි ී ු ූ ෙ ේ ෛ ො ෝ ෞ];
+define Other ් | ං | ඃ ;
 
-! when vowel-final lexical base + vowel-initial morpheme, the final vowel of the preceding component is deleted
-define VowFinDeletion VowelShort -> 0 || _ %^ VowelShort;
+define PossNounStem ?+ "+Guess":0 ;
 
-! insert [y] after front vowels, [w] after back vowels, but before a vowel-initial morpheme
-define SemiVowelInsertion1 [..] -> ය || [ි | ෙ | ැ] _ [VowelShort | 0] %^;
+read lexc < nouns.lexc
 
-define SemiVowelInsertion2 [..] -> ව || [ු | ො | [ා] _ [VowelShort | 0] %^;
+substitute defined PossNounStem for "^GUESSSTEM"
+define AllInclusive ;
 
-! ASSIMILATION
-! T~D: 't' becomes 'd' before 'd'
-define TtoD ත -> ද ||  _ %^ ද;
+read regex ~$["+Guess"] .o. AllInclusive ;
+save stack attested.fst
 
-! K~P: 'k' becomes 'p' before 'p'
-define KtoP ක -> ප ||  _ %^ ප;
+read regex $["+Guess"] .o. AllInclusive ;
+save stack guesser.fst
 
-! K~G: 'k' becomes 'g' before 'g'
-define KtoG ක -> ග ||  _ %^ ග;
-
-! W~P: 'w' becomes 'p' after 'p'
-define WtoP ව -> ප || ප %^ _;
-
-! W~N: 'w' becomes 'n' after 'n'
-define WtoN ව -> න || න %^ _;
-
-! W~D: 'w' becomes 'd' after 'd'
-define WtoD ව -> ද || ද %^ _;
-
-! T~L: 't' becomes 'l' before 'l'
-define TtoL ත -> ල || _ %^ ල;
-
-! N~M: 'n' becomes 'm' before 'm'
-define NtoM න -> ම || _ %^ ම;
-
-! add vowel 'u' or 'a' between 'k_ʈa'
-define Epenthesis ක් -> [ක | කු] || _ %^ ට;
-
-# Cleanup 1: Remove ^ (generic morpheme boundary tag)
-define Cleanup1 %^ -> 0;
-
-! Emily ended here
-
-regex ( Nouns | Verbs );
-
-save stack sinmorph.fst
+! save stack sinmorph.fst
