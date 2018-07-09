@@ -26,8 +26,6 @@ Sample usage:
 
 from subprocess import Popen, PIPE
 import regex as re
-import functools
-
 
 class SinMorph(object):
     """Interface to the sinmorph.fst via Foma."""
@@ -77,6 +75,7 @@ class SinMorph(object):
             return (None, None)
 
     def _get_analyses(self, tokens):
+        tokens = [t.replace('\u200d', '') for t in tokens]
         token_list = '\n'.join(tokens)
         pipe = Popen(['flookup', '-a', '-x', self.fst],
                      stdout=PIPE, stdin=PIPE)

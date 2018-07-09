@@ -23616,6 +23616,7 @@ fපෝමික LongANoun; ! faoːmikaː "formica"
 
 LEXICON ShortANoun
 +N+Nom+Sg:0 #;
++N+Nom+Indef+Sg:ක් #; ! -k
 +N+Nom+Pl+Anim:ො #; ! -o
 +N+Nom+Pl+Anim:ෝ #; ! -oo
 +N+Nom+Pl+Anim:ු #; ! -u
@@ -23624,11 +23625,13 @@ LEXICON ShortANoun
 +N+Acc+Pl+Anim:න්ව #; ! -nwa
 +N+Acc+Pl+Inanim:ුන්ව #; ! -unwa
 +N+Dat+Sg:ට #; ! -ʈa
++N+Dat+Indef+Sg:කට #; ! -kaʈa
 +N+Dat+Pl+Anim:න්ට #; ! -nʈa
 +N+Dat+Pl+Inanim:වලට #; ! -walaʈa
 +N+Dat+Pl+Inanim:වාල්වලට #; ! -waalwalaʈa
 +N+InstrAbl+Sg+Anim:ගෙඞ් #; ! -geŋ
 +N+InstrAbl+Sg+Anim:ගෙන් #; ! -gen
++N+InstrAbl+Indef+Sg+Anim:කින් #; ! -kin
 +N+InstrAbl+Pl+Anim:ඟෙඞ #; ! -nngeŋ
 +N+InstrAbl+Pl+Anim:න්ගෙන් #; ! -ngen
 +N+InstrAbl+Sg+Inanim:ෙන් #; ! -en
@@ -23642,12 +23645,14 @@ LEXICON ShortANoun
 +N+GenLoc+Pl+Anim:න්ගේ #; ! -ngeː
 +N+GenLoc+Sg+Inanim:ේ #; ! -eː
 +N+GenLoc+Sg+Inanim:වල්වල #; ! -walwala
++N+GenLoc+Indef+Sg:ක #; ! -ka
 +N+Voc+Sg+Anim:ේ #; ! -eː
 +N+Voc+Pl+Anim:නෙ #; ! -ne
 +N+Voc+Pl:නේ #; ! -eː
 
 LEXICON LongANoun
 ා+N+Nom+Sg:ා #;
+ා+N+Nom+Indef+Sg:ාක් #; ! -k
 ා+N+Nom+Pl+Anim:ො #; ! -o
 ා+N+Nom+Pl+Anim:ෝ #; ! -oo
 ා+N+Nom+Pl+Anim:ු #; ! -u
@@ -23656,11 +23661,13 @@ LEXICON LongANoun
 ා+N+Acc+Pl+Anim:න්ව #; ! -nwa
 ා+N+Acc+Pl+Inanim:ුන්ව #; ! -unwa
 ා+N+Dat+Sg:ාට #; ! -ʈa
+ා+N+Dat+Indef+Sg:ාකට #; ! -kaʈa
 ා+N+Dat+Pl+Anim:න්ට #; ! -nʈa
 ා+N+Dat+Pl+Inanim:ාවලට #; ! -walaʈa
 ා+N+Dat+Pl+infantilism:ාවාල්වලට #; ! -waalwalaʈa
 ා+N+InstrAbl+Sg+Anim:ාගෙඞ් #; ! -geŋ
 ා+N+InstrAbl+Sg+Anim:ගෙන් #; ! -gen
+ා+N+InstrAbl+Indef+Sg+Anim:ාකින් #; ! -kin
 ා+N+InstrAbl+Pl+Anim:ාඟෙඞ #; ! -nngeŋ
 ා+N+InstrAbl+Pl+Anim:න්ගෙන් #; ! -ngen
 ා+N+InstrAbl+Pl+Anim:න්ගෙන් #; ! -ngeŋ
@@ -23675,6 +23682,7 @@ LEXICON LongANoun
 ා+N+GenLoc+Pl+Anim:න්ගේ #; ! -ngeː
 ා+N+GenLoc+Sg+Inanim:ේ #; ! -eː
 ා+N+GenLoc+Sg+Inanim:වල්වල #; ! -walwala
+ා+N+GenLoc+Indef+Sg:ාක #; ! -ka
 ා+N+Voc+Sg+Anim:ේ #; ! -eː
 ා+N+Voc+Pl+Anim:නෙ #; ! -ne
 ා+N+Voc+Pl:නේ #; ! -eː
