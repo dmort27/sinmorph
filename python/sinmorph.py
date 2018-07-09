@@ -46,9 +46,10 @@ class SinMorph(object):
         if 'Voc' in morphs:
             cost += 1
         if len(lemma) < 3:
-            cost += 2
+            cost += 3
         if len(lemma) < 1:
             cost += 10
+        cost += abs(len(lemma) - 6) * 0.5
         return cost
 
     def _to_morphs(self, analysis):
