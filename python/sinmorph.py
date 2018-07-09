@@ -26,6 +26,7 @@ Sample usage:
 
 from subprocess import Popen, PIPE
 import regex as re
+import functools
 
 
 class SinMorph(object):
