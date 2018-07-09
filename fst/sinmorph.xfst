@@ -8,11 +8,15 @@ define Vowel ා | ැ | ෑ | ි | ී | ු | ූ | ෙ | ේ | ෛ | ො | �
 
 define Other ් | ං | ඃ ;
 
-define PossNounStem [[Cons | Vowel | Other]+ Cons] "+Guess":0 ;
+define PossNounStemA [[Cons | Vowel | Other]+ Cons] "+Guess":0 ;
+define PossNounStemAA [[Cons | Vowel | Other]+ ා] "+Guess":0 ;
+define PossNounStemC [[Cons | Vowel | Other]+ ්] "+Guess":0 ;
 
 read lexc < nouns.lexc
 
-substitute defined PossNounStem for "^GUESSSTEM"
+substitute defined PossNounStemA for "^GUESSSTEMA"
+substitute defined PossNounStemAA for "^GUESSSTEMAA"
+substitute defined PossNounStemC for "^GUESSSTEMC"
 define AllInclusive ;
 
 read regex ~$["+Guess"] .o. AllInclusive ;
