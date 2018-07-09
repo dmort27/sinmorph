@@ -27,6 +27,7 @@ Sample usage:
 from subprocess import Popen, PIPE
 import regex as re
 
+
 class SinMorph(object):
     """Interface to the sinmorph.fst via Foma."""
 
@@ -70,7 +71,7 @@ class SinMorph(object):
         lemma_list = [self._get_lemma(x) for x in morph_list]
         costs = map(self._get_cost, zip(analyses, morph_list, lemma_list))
         try:
-            _, morphs, lemma = sorted(zip(costs, morph_list, lemma_list))[-1]
+            _, morphs, lemma = sorted(zip(costs, morph_list, lemma_list))[0]
             return (morphs, lemma)
         except IndexError:
             return (None, None)
